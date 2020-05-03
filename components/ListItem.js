@@ -1,23 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const ListItem = () => {
+const ListItem = ({imageUrl, title, author}) => {
   return (
     <View style={styles.itemContainer}>
       <View style={styles.leftContainer}>
         <Image
           style={{ width: 100, height: 100 }}
-          source={{ uri: 'https://picsum.photos/seed/picsum/200/300' }}
+          source={{ uri: imageUrl }}
         />
       </View>
       <View style={styles.rigthtContainer}>
         <Text numberOfLines={3} style={styles.text}>
-          The API will return 30 items per page by default.
-          To request another page, use the ?page parameter.
-          To change the amount of items per page, use the ?limit parameter.
+          {title}
         </Text>
         <Text style={styles.subText}>
-          React News
+          {author}
         </Text>
       </View>
     </View>
