@@ -10,7 +10,7 @@ const URL = `http://newsapi.org/v2/top-headlines?country=jp&category=business&ap
 export default function App() {
   const [articles, setArticles] = useState([])
   useEffect(() => {
-    fetchArticles
+    fetchArticles();
   }, []);
 
   const fetchArticles = async() => {
