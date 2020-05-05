@@ -7,7 +7,7 @@ const reducer = (state = initialState, action) => {
     case 'ADD_CLIP':
       return {
         ...state,
-        clips: [...state.clips, action.clips]
+        clips: [...state.clips, action.clip]
       };
     case 'DELETE_CLIP':
       return {
